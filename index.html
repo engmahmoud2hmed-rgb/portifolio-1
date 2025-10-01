@@ -10,19 +10,42 @@
 <body>
 
  
-  <nav>
-    <div class="logo">PORTFOLIO</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Pages</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+ <!-- Navbar -->
+<!-- Navbar -->
+<!-- Navbar -->
+<!-- Navbar -->
+<nav>
+  <div class="logo">PORTFOLIO</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="menu-toggle">&#9776;</div>
+</nav>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
 
   <!-- mid Section -->
-  <section class="mid">
+  <section id="home" class="mid">
     <h1>PORTFOLIO <span>Hello Everyone</span></h1>
     <p>
       World class consumer and trends research capabilities we design for 
@@ -31,7 +54,7 @@
   </section>
 
 
-  <section class="projects">
+  <section id="projects" class="projects">
   <div class="project">
     <img src="img/1.png.webp" alt="Work 1">
     <div class="overlay">
@@ -148,17 +171,15 @@
   </section>
 
   <!-- Blog Section -->
-  <section class="blog-section">
- 
+<section id="blog" class="blog-section">
   <div class="blog-header">
     <h1 class="blog-text">BLOG</h1>
     <h2 class="blog-title">Our Creative Articles</h2>
     <a href="#" class="blog-but">More Blogs</a>
   </div>
 
-
   <div class="blog-container">
-   
+    <!-- Blog Card 1 -->
     <div class="blog-card">
       <img src="img/1.png (1).webp" alt="Blog Image">
       <div class="blog-content">
@@ -174,7 +195,7 @@
       </div>
     </div>
 
-   
+    <!-- Blog Card 2 -->
     <div class="blog-card">
       <img src="img/2.png.webp" alt="Blog Image">
       <div class="blog-content">
@@ -190,7 +211,7 @@
       </div>
     </div>
 
-   
+    <!-- Blog Card 3 -->
     <div class="blog-card">
       <img src="img/3.png.webp" alt="Blog Image">
       <div class="blog-content">
@@ -209,8 +230,8 @@
 </section>
 
 
-<!-- Testimonial Section -->
-<section class="testimonial-section">
+<<!-- Testimonial Section -->
+<section class="testimonial-section" id="testimonials">
   <div class="container">
     <h2 class="testimonial-title">TESTIMONIAL</h2>
 
@@ -218,13 +239,38 @@
       <button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
 
       <div class="testimonial-box">
-        <img src="img/thumb.png.webp" alt="Person" class="testimonial-img">
-        <p class="testimonial-text">
-          Innovative brewing methods and our coffee is sourced from various 
-          parts of the globe and are roasted to perfection.
-        </p>
-        <h3 class="testimonial-name">Mesica Chouhan</h3>
-        <p class="testimonial-role">Coffee Expert</p>
+        <!-- Testimonial 1 -->
+        <div class="testimonial-item active">
+          <img src="img/thumb.png.webp" alt="Person" class="testimonial-img">
+          <p class="testimonial-text">
+            Innovative brewing methods and our coffee is sourced from various 
+            parts of the globe and are roasted to perfection.
+          </p>
+          <h3 class="testimonial-name">Mesica Chouhan</h3>
+          <p class="testimonial-role">Coffee Expert</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-item">
+          <img src="img/author2.png.webp" alt="Person" class="testimonial-img">
+          <p class="testimonial-text">
+            The service was outstanding, and the team went above and beyond 
+            to deliver high-quality results on time.
+          </p>
+          <h3 class="testimonial-name">David Lee</h3>
+          <p class="testimonial-role">Business Owner</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-item">
+          <img src="img/author3.png.webp" alt="Person" class="testimonial-img">
+          <p class="testimonial-text">
+            Truly professional and innovative. Their creative approach 
+            made our project stand out from the competition.
+          </p>
+          <h3 class="testimonial-name">Sarah Johnson</h3>
+          <p class="testimonial-role">Marketing Manager</p>
+        </div>
       </div>
 
       <button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
