@@ -1,22 +1,22 @@
 // main.js
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ======= Menu Toggle =======
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links a");
+ // ======= Menu Toggle =======
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinksContainer = document.querySelector(".nav-links");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
+if (menuToggle && navLinksContainer) {
+  menuToggle.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("active");
+  });
 
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-      });
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinksContainer.classList.remove("active");
     });
-  }
+  });
+}
 
   // ======= Testimonials Slider =======
   const testimonials = document.querySelectorAll(".testimonial-item");

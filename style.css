@@ -1,9 +1,10 @@
-/* ===== General ===== */
+/* ===== Global ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden; /* منع السحب يمين */
+  background-color: #040E27;
 }
 
 @keyframes fadeInUp {
@@ -69,7 +70,7 @@ nav .logo {
     position: absolute;
     top: 70px;
     right: 0;
-    width: 220px;
+    width: fit-content; /* يتناسب مع المحتوى */
     flex-direction: column;
     background-color: #040E27;
     text-align: right;
@@ -88,38 +89,25 @@ nav .logo {
 .mid {
   text-align: center;
   padding: 60px 20px;
-  background-color: #040E27;
 }
 
-.mid h1 {
-  font-size: 220px;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.1);
-  font-weight: 900;
-  margin: 0;
-  position: relative;
-  animation: fadeInUp 1s ease forwards;
+.mid {
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.mid h1 span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
-  font-weight: 500;
-  color: #1e90ff;
-}
+
 
 .mid p {
   font-size: 50px;
   max-width: 1000px;
-  margin: 3px auto 0;
+  margin: 0 auto;
+  margin-top: -90px;
   line-height: 70px;
   font-weight: 400;
   padding-bottom: 20px;
-  margin-top: -90px;
   animation: fadeInUp 1.3s ease forwards;
+  white-space: normal; /* يسمح بالنص للالتفاف على الموبايل */
 }
 
 /* ===== Responsive Mid ===== */
@@ -129,7 +117,7 @@ nav .logo {
 }
 
 @media (max-width: 768px) {
-  .mid h1 { font-size: 80px; }
+  .mid h1 { font-size: 80px; white-space: normal; }
   .mid h1 span { font-size: 22px; }
   .mid p { font-size: 22px; line-height: 35px; margin-top: -20px; }
 }
